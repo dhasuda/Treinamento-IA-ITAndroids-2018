@@ -374,23 +374,16 @@ bool PotentialFieldPlanner::calculateTrajectory(double* sx, double* sy, double* 
 
     printf("Simulation ended\n");
 
-    //Calculates the direction of each point.
-    r = sqrt(robot_vx*robot_vx + robot_vy*robot_vy);
-    vx[0] = robot_vx/r;
-    vy[0] = robot_vy/r;
+    // TODO: Calculates the direction of each point.
+
     for(int i=1; i<(*n_steps); i++){
-        r = sqrt((sx[i]-sx[i+1])*(sx[i]-sx[i+1]) + (sy[i]-sy[i+1])*(sy[i]-sy[i+1]));
-        vx[i] = (sx[i+1]-sx[i])/r;
-        vy[i] = (sy[i+1]-sy[i])/r;
+    // TODO
     }
 
+    // TODO:
     //Sets each point i at the middle of point i+1 and point i, so
     //that each point actually have the calculated direction.
     //All archs are circles because of constant step size.
-    for(int i=1; i<(*n_steps); i++){
-        sx[i] = (sx[i+1]+sx[i])/2.0;
-        sy[i] = (sy[i+1]+sy[i])/2.0;
-    }
 
     return true;
 }
