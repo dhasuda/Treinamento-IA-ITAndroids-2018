@@ -181,27 +181,9 @@ bool PotentialFieldPlanner::calculateEVector(double x, double y, double* Ex, dou
         (*Ey) += obstacles_K3[i]*delta_y/(distance*(distance-obstacles_R[i])*(distance-obstacles_R[i])*(distance-obstacles_R[i]));
     }
 
-    //Wall repulsive field.
+    //TODO: Wall repulsive field.
     for(int i=0; i<N_WALLS; i++){
-        delta_x = ((x-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (y-walls_y1[i])*(walls_y2[i]-walls_y1[i]))*(walls_x2[i] - walls_x1[i])/
-                  ((walls_x2[i]-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (walls_y2[i]-walls_y1[i])*(walls_y2[i]-walls_y1[i]));
-        delta_y = ((x-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (y-walls_y1[i])*(walls_y2[i]-walls_y1[i]))*(walls_y2[i] - walls_y1[i])/
-                  ((walls_x2[i]-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (walls_y2[i]-walls_y1[i])*(walls_y2[i]-walls_y1[i]));
-        if(walls_x1[i]==walls_x2[i]){
-            distance = delta_y/(walls_y2[i]-walls_y1[i]);
-        }
-        else distance = delta_x/(walls_x2[i]-walls_x1[i]);
-        if (distance<0) distance=0;
-        if (distance>1) distance=1;
-        delta_x = x - (walls_x1[i] + distance*(walls_x2[i] - walls_x1[i]));
-        delta_y = y - (walls_y1[i] + distance*(walls_y2[i] - walls_y1[i]));
-        distance = sqrt(delta_y*delta_y + delta_x*delta_x);
-        (*Ex) += walls_K1[i]*delta_x/(distance*(distance-walls_R[i]));
-        (*Ex) += walls_K2[i]*delta_x/(distance*(distance-walls_R[i])*(distance-walls_R[i]));
-        (*Ex) += walls_K3[i]*delta_x/(distance*(distance-walls_R[i])*(distance-walls_R[i])*(distance-walls_R[i]));
-        (*Ey) += walls_K1[i]*delta_y/(distance*(distance-walls_R[i]));
-        (*Ey) += walls_K2[i]*delta_y/(distance*(distance-walls_R[i])*(distance-walls_R[i]));
-        (*Ey) += walls_K3[i]*delta_y/(distance*(distance-walls_R[i])*(distance-walls_R[i])*(distance-walls_R[i]));
+        // TODO
     }
 
     //Target atractive.
