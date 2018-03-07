@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 1/Code/Table.cpp
+iostream
+-
+Table.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 1/Code/Table.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 1/Code/Table.h
+vector
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 1/Code/main.cpp
+iostream
+-
+vector
+-
+Table.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 1/Code/Table.h
+

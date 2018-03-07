@@ -234,36 +234,6 @@ bool PotentialFieldPlanner::calculateEVector(double x, double y, double* Ex, dou
     (*Ey) += kr*target_K2*delta_y/(distance*(distance-target_R)*(distance-target_R));
     (*Ey) += kr*target_K3*delta_y/(distance*(distance-target_R)*(distance-target_R)*(distance-target_R));
 
-    for(int i=0; i<N_WALLS; i++){
-        delta_x = ((target_x-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (target_y-walls_y1[i])*(walls_y2[i]-walls_y1[i]))*(walls_x2[i] - walls_x1[i])/
-                  ((walls_x2[i]-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (walls_y2[i]-walls_y1[i])*(walls_y2[i]-walls_y1[i]));
-        delta_y = ((target_x-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (target_y-walls_y1[i])*(walls_y2[i]-walls_y1[i]))*(walls_y2[i] - walls_y1[i])/
-                  ((walls_x2[i]-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (walls_y2[i]-walls_y1[i])*(walls_y2[i]-walls_y1[i]));
-        if(walls_x1[i]==walls_x2[i]){
-            distance = delta_y/(walls_y2[i]-walls_y1[i]);
-        }
-        else distance = delta_x/(walls_x2[i]-walls_x1[i]);
-        delta_x += walls_x1[i];
-        delta_y += walls_y1[i];
-        if(distance>0 && distance < 1 &&
-           sqrt((delta_x-target_x)*(delta_x-target_x) + (delta_y-target_y)*(delta_y-target_y)) < 3*R_LIMIT &&
-           (delta_x-target_x)*(target_dirx) + (delta_y-target_y)*(target_diry) < 0 &&
-           (x-target_x)*(target_dirx) + (y-target_y)*(target_diry) > 0 &&
-           sqrt((x-target_x)*(x-target_x)+(y-target_y)*(y-target_y)) < 2*target_repulsive_threshold){
-            distance = sqrt((walls_x2[i]-walls_x1[i])*(walls_x2[i]-walls_x1[i]) + (walls_y2[i]-walls_y1[i])*(walls_y2[i]-walls_y1[i]));
-            delta_x = (delta_x + target_x)*0.5 + (walls_x2[i] - walls_x1[i])*target_repulsive_threshold*0.7/distance - target_x;
-            delta_y = (delta_y + target_y)*0.5 + (walls_y2[i] - walls_y1[i])*target_repulsive_threshold*0.7/distance - target_y;
-            distance = sqrt(delta_y*delta_y + delta_x*delta_x);
-            kr = 1;
-            /*(*Ex) += kr*target_K1*delta_x/(distance*distance);
-            (*Ex) += kr*target_K2*delta_x/(distance*distance*distance);
-            (*Ex) += kr*target_K3*delta_x/(distance*distance*distance*distance);
-            (*Ey) += kr*target_K1*delta_y/(distance*distance);
-            (*Ey) += kr*target_K2*delta_y/(distance*distance*distance);
-            (*Ey) += kr*target_K3*delta_y/(distance*distance*distance*distance);*/
-        }
-
-    }
     if(sqrt((*Ex)*(*Ex)+(*Ey)*(*Ey))<0.1){
         printf("pos: %f %f E: %f %f\n", x, y, *Ex, *Ey);
     }
@@ -374,10 +344,8 @@ bool PotentialFieldPlanner::calculateTrajectory(double* sx, double* sy, double* 
 
     printf("Simulation ended\n");
 
-    // TODO: Calculates the direction of each point.
-
     for(int i=1; i<(*n_steps); i++){
-    // TODO
+    // TODO: Calculates the direction of each point.
     }
 
     // TODO:
