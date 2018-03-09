@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Algorithm.cpp
+Algorithm.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Algorithm.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Algorithm.h
+Individual.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.h
+Population.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Population.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.cpp
+Individual.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.h
+cstdlib
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Population.cpp
+Population.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Population.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Population.h
+Individual.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.h
+vector
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/main.cpp
+iostream
+-
+Algorithm.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Algorithm.h
+Individual.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Individual.h
+Population.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 2/Genetic Algorithm/Population.h
+
