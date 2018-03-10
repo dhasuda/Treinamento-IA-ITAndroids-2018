@@ -18,7 +18,11 @@ int main() {
     while (bestFit < 1000) {
 
         //TODO
+        currentPopulation = algorithm.evolvePopulation(currentPopulation);
 
+
+        completeGame = currentPopulation.getFittest();
+        bestFit = completeGame.getFitness();
         printf("Generation: %d    Fit: %d\n", generation, bestFit);
         generation++;
 

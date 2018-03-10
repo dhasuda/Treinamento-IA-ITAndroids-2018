@@ -7,6 +7,7 @@
 
 #include "Individual.h"
 #include <vector>
+#include <algorithm>
 
 class Population {
 private:
@@ -18,7 +19,8 @@ public:
     void saveIndividual(Individual newIndividual);
     Individual getIndividual(int index);
     Individual getFittest();
-
+    void ordenar();
+    bool comparacao(Individual indiv1, Individual indiv2);
 };
 
 

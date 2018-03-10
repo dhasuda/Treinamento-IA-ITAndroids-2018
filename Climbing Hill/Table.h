@@ -15,6 +15,8 @@ public:
 
     void printTable();
 
+    int getZero();
+
 private:
     vector<vector<int>> values;
 

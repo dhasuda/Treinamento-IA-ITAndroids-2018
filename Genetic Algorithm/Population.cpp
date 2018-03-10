@@ -33,3 +33,12 @@ Individual Population::getFittest() {
     }
     return fittest;
 }
+
+bool Population::comparacao(Individual indiv1, Individual indiv2){
+    return indiv1.getFitness()>indiv2.getFitness();
+};
+
+void Population::ordenar() {
+    std::sort(individuals.begin(), individuals.end(), comparacao);
+
+}

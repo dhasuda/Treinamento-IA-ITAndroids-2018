@@ -28,6 +28,8 @@ int main() {
     values.push_back(row3);
 
     Table *table = new Table(values);
+
+
     table->printTable();
     std::cout << "h = " << table->getHValue() << std::endl;
 

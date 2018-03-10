@@ -6,14 +6,43 @@
 
 Population Algorithm::evolvePopulation(Population pop) {
     //TODO
+    Population popevolved = Population(0);
+    pop.ordenar();
+    for (int i = 0; i<10; i++)
+        popevolved.saveIndividual(pop.getIndividual(i));
+
+    for( int i=10; i<50; i++) {
+        popevolved.saveIndividual(crossover(tournamentSelection(popevolved), tournamentSelection(popevolved)));
+        mutate(popevolved.getIndividual(i));
+    }
 }
 
 Individual Algorithm::crossover(Individual indiv1, Individual indiv2) {
     //TODO
+    Individual filho = Individual();
+    for(int i=0; i < 9; i++){
+        if((double)rand()<0,5){
+            for(int j=0; j<9; j++)
+                filho.setGene(indiv1.getGene(i, j), i, j);
+        } else {
+            for (int k=0; k<9; k++)
+                filho.setGene(indiv2.getGene(i, k), i, k);
+        }
+    }
+
+    return filho;
 }
 
 void Algorithm::mutate(Individual indiv) {
-    //TODO
+    double changes=(double)rand();
+    if (average >= changes)
+    {
+        changes=changes*81;
+        for (int i = 0; i < changes; ++i) {
+            indiv.setGene(rand()%9+1, rand()%9, rand()%9);
+        }
+    }
+
 }
 
 // Select individuals for crossover
