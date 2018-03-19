@@ -20,7 +20,7 @@ public:
     Individual getIndividual(int index);
     Individual getFittest();
     void ordenar();
-    bool comparacao(Individual indiv1, Individual indiv2);
+    static bool comparacao(Individual indiv1, Individual indiv2);
 };
 
 

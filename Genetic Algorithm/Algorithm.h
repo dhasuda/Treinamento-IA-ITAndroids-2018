@@ -17,7 +17,7 @@ private:
 
 public:
     static Population evolvePopulation(Population pop);
-    static double average = 0,21;
+//    static double average = 0.21;
 
 };
 
